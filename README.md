@@ -69,6 +69,7 @@ Will bring an array with element that match width \_id
       "assignedTo": "",
       "_id": "",
       "name": "",
+      "assignments":[]
     }
 
 ]
@@ -134,6 +135,7 @@ Will bring an array with element that match width \_id
       "assignedTo": "",
       "_id": "",
       "name": "",
+      "assignments":[]
     }
 
 ]

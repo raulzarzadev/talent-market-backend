@@ -6,6 +6,7 @@ const userSquema = new Schema({
   rol: Array,
   image: String,
   location: Array,
+  assignments: Array
 })
 
 module.exports = model('User', userSquema)

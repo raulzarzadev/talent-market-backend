@@ -6,6 +6,7 @@ const candidateSquema = new Schema({
   rol: Array,
   image: String,
   location: Array,
+  assignments: Array,
 })
 
 module.exports = model('Candidate', candidateSquema)
