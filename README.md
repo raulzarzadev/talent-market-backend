@@ -9,8 +9,7 @@ API to a DataMapper-backed model.
 
     docker pull raulzarza/talent-market:latest
 
-* Also you can download this repository 
-
+- Also you can download this repository
 
 ## Docker Compose
 
@@ -33,17 +32,14 @@ API to a DataMapper-backed model.
 
 # REST API Short
 
-    GET /api/user
+    GET /api/user ## params {_id, rol, name}
     POST /api/user
-    GET /api/user/:id
     DELETE /api/user/:id
 
 
-    GET /api/candidate
+    GET /api/candidate ## params {_id, rol, name}
     POST /api/candidate
-    GET /api/candidate/:id
     DELETE /api/candidate/:id
-
 
 # REST API
 
@@ -55,17 +51,27 @@ API to a DataMapper-backed model.
 
 Get all users
 
+`GET /api/user?_id=id`
+
+Will bring an array with element that match width \_id
+
 ### Request
 
     /
 
 ### Response
 
+[
+
     {
-        ok: boolean,
-        type: string,
-        data: Array
+       "rol": [],
+      "location": [],
+      "assignedTo": "",
+      "_id": "",
+      "name": "",
     }
+
+]
 
 `POST /api/user`
 
@@ -83,21 +89,6 @@ Create new user
     {
         ok: boolean,
         type: string
-    }
-
-`GET /api/user/:id`
-
-Get user by id
-
-### Request
-
-    /:id
-
-### Response
-
-     {
-        "name": string,
-        "rol": array
     }
 
 `DELETE /api/user/:id`
@@ -119,9 +110,15 @@ Delete user by id
 
 ###
 
+###
+
 `GET /api/candidate`
 
-Get all candidates
+Get all Candidates
+
+`GET /api/candidate?_id=id`
+
+Will bring an array with element that match width \_id
 
 ### Request
 
@@ -129,11 +126,17 @@ Get all candidates
 
 ### Response
 
+[
+
     {
-        ok: boolean,
-        type: string,
-        data: Array
+       "rol": [],
+      "location": [],
+      "assignedTo": "",
+      "_id": "",
+      "name": "",
     }
+
+]
 
 `POST /api/candidate`
 
@@ -151,21 +154,6 @@ Create new candidate
     {
         ok: boolean,
         type: string
-    }
-
-`GET /api/candidate/:id`
-
-Get candidate by id
-
-### Request
-
-    /:id
-
-### Response
-
-     {
-        "name": string,
-        "rol": array
     }
 
 `DELETE /api/candidate/:id`

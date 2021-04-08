@@ -9,8 +9,15 @@ export const getResource = async (req, res) => {
     .catch((err) => res.json(setResponse(false, 'GET_FAIL', false, err)))
 }
 
-export const getResources = async (req, res) => {
+/* export const getResources = async (req, res) => {
   SQUEMA.find()
+    .then((response) => res.json(setResponse(true, 'GET_RESOURCES', response)))
+    .catch((err) => res.json(setResponse(false, 'GET_FAIL', false, err)))
+} */
+
+export const getResourcesByQuery = async (req, res) => {
+  const { query } = req
+  SQUEMA.find(query)
     .then((response) => res.json(setResponse(true, 'GET_RESOURCES', response)))
     .catch((err) => res.json(setResponse(false, 'GET_FAIL', false, err)))
 }

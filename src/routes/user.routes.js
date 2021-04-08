@@ -1,9 +1,14 @@
 const { Router } = require('express')
 const router = Router()
-const { getResource, getResources, postResource, deleteResource } = require('../controllers/user.controllers')
+const { 
+  getResourcesByQuery, 
+  postResource, 
+  deleteResource, 
+  getResource 
+} = require('../controllers/user.controllers')
 
 router.route('/')
-  .get(getResources)
+  .get(getResourcesByQuery)
   .post(postResource)
   
 

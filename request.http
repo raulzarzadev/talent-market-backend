@@ -26,12 +26,12 @@ Content-Type: application/json
 
 ###
 
-GET {{api}}/user
+GET {{api}}/user?
 
 ###
 
 
-GET {{api}}/user/235234234
+GET {{api}}/user?_id=606e381132ad2404bd6df9f2
 
 
 ###

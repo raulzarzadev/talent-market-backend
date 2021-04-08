@@ -1,16 +1,17 @@
 const { Router } = require('express')
 const router = Router()
 
-const { getResource,
-   getResources,
-   postResource, 
-   deleteResource 
+const { 
+  getResourcesByQuery, 
+  postResource, 
+  deleteResource, 
+  getResource 
   } = require('../controllers/candidate.controllers')
 
 
 router
   .route('/')
-  .get(getResources)
+  .get(getResourcesByQuery)
   .post(postResource)
 
 router
