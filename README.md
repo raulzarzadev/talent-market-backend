@@ -5,9 +5,12 @@
 This is a bare-bones example of a Sinatra application providing a REST
 API to a DataMapper-backed model.
 
-## Install
+## Usage
 
     docker pull raulzarza/talent-market:latest
+
+* Also you can download this repository 
+
 
 ## Docker Compose
 
@@ -41,7 +44,7 @@ API to a DataMapper-backed model.
     GET /api/candidate/:id
     DELETE /api/candidate/:id
 
-        
+
 # REST API
 
 ## User Endpoints
