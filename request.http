@@ -1,0 +1,49 @@
+@api = http://localhost:3001/api
+
+###
+
+
+GET {{api}}/candidate
+
+
+###
+
+
+GET {{api}}/candidate/606e1deb86b9ed003bc0f0b5
+
+###
+
+POST {{api}}/candidate
+Content-Type: application/json
+
+{
+  "name": "Juan",
+  "assignedTo": "",
+  "image": "",
+  "location": []
+}
+
+
+###
+
+GET {{api}}/user
+
+###
+
+
+GET {{api}}/user/235234234
+
+
+###
+
+POST {{api}}/user
+Content-Type: application/json
+
+{
+  "name":"JOSE",
+  "rol":["principal"]
+}
+
+###
+
+DELETE {{api}}/user/606e2fd8999c190215ca04c9
