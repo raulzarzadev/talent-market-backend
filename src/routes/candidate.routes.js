@@ -5,19 +5,19 @@ const {
   getResourcesByQuery, 
   postResource, 
   deleteResource, 
-  getResource 
+  getResource, 
+  updateResource
   } = require('../controllers/candidate.controllers')
 
 
-router
-  .route('/')
+router.route('/')
   .get(getResourcesByQuery)
   .post(postResource)
 
-router
-  .route('/:id')
+router.route('/:id')
   .get(getResource)
   .delete(deleteResource)
+  .put(updateResource)
 
 
   

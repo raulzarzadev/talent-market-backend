@@ -31,6 +31,8 @@ GET {{api}}/user?
 ###
 
 
+
+
 GET {{api}}/user?_id=606e381132ad2404bd6df9f2
 
 
@@ -43,6 +45,17 @@ Content-Type: application/json
   "name":"JOSE",
   "rol":["principal"]
 }
+
+###
+
+PUT {{api}}/candidate/606e1deb86b9ed003bc0f0b5
+Content-Type: application/json
+
+
+{
+  "assignedTo":"606e381132ad2404bd6df9f2"
+}
+
 
 ###
 

@@ -4,7 +4,8 @@ const {
   getResourcesByQuery, 
   postResource, 
   deleteResource, 
-  getResource 
+  getResource, 
+  updateResource
 } = require('../controllers/user.controllers')
 
 router.route('/')
@@ -15,6 +16,7 @@ router.route('/')
 router.route('/:id')
   .get(getResource)
   .delete(deleteResource)
+  .put(updateResource)
 
 
 module.exports = router
