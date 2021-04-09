@@ -15,7 +15,6 @@ app.use(express.json())
 app.use(cors())
 
 //routes
-app.use('/api/user', require('./routes/user.routes'))
-app.use('/api/candidate', require('./routes/candidate.routes'))
+app.use('/api/talent', require('./routes/talent.routes'))
 
 module.exports = app

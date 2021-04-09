@@ -1,17 +1,18 @@
 const { Router } = require('express')
 const router = Router()
+
 const { 
   getResourcesByQuery, 
   postResource, 
   deleteResource, 
   getResource, 
   updateResource
-} = require('../controllers/user.controllers')
+  } = require('../controllers/talent.controllers')
+
 
 router.route('/')
   .get(getResourcesByQuery)
   .post(postResource)
-  
 
 router.route('/:id')
   .get(getResource)
@@ -19,4 +20,5 @@ router.route('/:id')
   .put(updateResource)
 
 
+  
 module.exports = router

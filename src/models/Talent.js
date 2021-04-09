@@ -1,12 +1,13 @@
 const { Schema, model } = require('mongoose')
 
-const candidateSquema = new Schema({
+const talentSquema = new Schema({
   name: String,
   assignedTo: String,
   rol: Array,
   image: String,
   location: Array,
   assignments: Array,
+  recruitedBy: String,
 })
 
-module.exports = model('Candidate', candidateSquema)
+module.exports = model('Talent', talentSquema)

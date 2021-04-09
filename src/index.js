@@ -5,7 +5,7 @@ require('./database')
 
 async function main() {
     await app.listen(app.get('port'));
-    console.log('Servidor en el puerto', app.get('port'))
+    console.log('Server on port', app.get('port'))
 }
 
 main();
