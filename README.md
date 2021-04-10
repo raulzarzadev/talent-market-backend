@@ -32,26 +32,22 @@ API to a DataMapper-backed model.
 
 # REST API Short
 
-    GET /api/user ## params {_id, rol, name}
-    POST /api/user
-    DELETE /api/user/:id
-
-
-    GET /api/candidate ## params {_id, rol, name}
-    POST /api/candidate
-    DELETE /api/candidate/:id
+    GET /api/talent ## params {_id, rol, name}
+    POST /api/talent
+    DELETE /api/talent/:id
+    PUT /api/talent/:id ## body { talent }
 
 # REST API
 
-## User Endpoints
+## Talent Endpoints
 
 ###
 
-`GET /api/user`
+`GET /api/talent`
 
 Get all users
 
-`GET /api/user?_id=id`
+`GET /api/talent?_id=id`
 
 Will bring an array with element that match width \_id
 
@@ -67,6 +63,7 @@ Will bring an array with element that match width \_id
        "rol": [],
       "location": [],
       "assignedTo": "",
+      "recruitedBy:"",
       "_id": "",
       "name": "",
       "assignments":[]
@@ -74,7 +71,7 @@ Will bring an array with element that match width \_id
 
 ]
 
-`POST /api/user`
+`POST /api/talent`
 
 Create new user
 
@@ -92,11 +89,11 @@ Create new user
         type: string
     }
 
-`DELETE /api/user/:id`
+`DELETE /api/talent/:id`
 
 Delete user by id
 
-### Request
+### Request 
 
     /:id
 
@@ -107,62 +104,13 @@ Delete user by id
         type: string,
     }
 
-## Candidates Endpoints
 
-###
 
-###
+`PUT /api/user/:id`
 
-`GET /api/candidate`
+Delete talent by id
 
-Get all Candidates
-
-`GET /api/candidate?_id=id`
-
-Will bring an array with element that match width \_id
-
-### Request
-
-    /
-
-### Response
-
-[
-
-    {
-       "rol": [],
-      "location": [],
-      "assignedTo": "",
-      "_id": "",
-      "name": "",
-      "assignments":[]
-    }
-
-]
-
-`POST /api/candidate`
-
-Create new candidate
-
-### Request
-
-    {
-        "name": string,
-        "rol": array
-    }
-
-### Response
-
-    {
-        ok: boolean,
-        type: string
-    }
-
-`DELETE /api/candidate/:id`
-
-Delete candidate by id
-
-### Request
+### Request 
 
     /:id
 
@@ -171,4 +119,5 @@ Delete candidate by id
     {
         ok: boolean,
         type: string,
+        data: new
     }
