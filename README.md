@@ -7,9 +7,9 @@ API to a DataMapper-backed model.
 
 ## Used technology
 
-* express (nodejs)
+* node (express) as backend framework
 * mongodb (mongoose) as ODM
-* docker (docker-compose)
+* docker (docker-compose) as containers manager
 
 
 ## Usage
