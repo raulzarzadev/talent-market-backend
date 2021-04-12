@@ -5,6 +5,13 @@
 This is a bare-bones example of a Sinatra application providing a REST
 API to a DataMapper-backed model.
 
+## Used technology
+
+* express (nodejs)
+* mongodb (mongoose) as ODM
+* docker (docker-compose)
+
+
 ## Usage
 
     docker pull raulzarza/talent-market:latest
@@ -49,7 +56,7 @@ Get all users
 
 `GET /api/talent?_id=id`
 
-Will bring an array with element that match width \_id
+Will bring an array with element that match width mongodb id (_id)
 
 ### Request
 
